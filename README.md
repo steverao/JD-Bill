@@ -12,7 +12,7 @@
 
 该业务主要通过撮合银行与企业，平台通过对接多家银行提供其最新的贴现率等信息，为企业票据贴现提供一个合规、高效和便捷的平台。
 
-![](\document-illustration\tiexian.webp)
+![](document-illustration/tiexian.webp)
 
 1.2.2 票据直通车
 
