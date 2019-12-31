@@ -1,13 +1,17 @@
-## JD Bill
+## JD Bill-An Supply Chain Finance Platform
 
-Bank acceptance bills have become a low-risk financial instrument commonly used by many small, medium and micro enterprises due to their short term, high convenience and strong liquidity. Through discounted bills, companies can turn the "bills" in their hands into "cash" and accelerate corporate funds Turnover, improve the efficiency of capital use. However, the long-term asymmetry of information between small and medium-sized enterprises and financial institutions, which has led to the realization of bill financing, has always been a pain for small and medium-sized enterprises. Bank credit and discount procedures are complicated, intermediary market financing risks are high and intermediaries cannot provide compliance discount vouchers. In response to the above problems, this system aims to solve the small, micro, short, and urgent needs of small and medium-sized enterprises, open the bottleneck of the connection between assets and funds, and build a "bridge" between enterprises and financial institutions to provide compliance, efficiency, efficiency and convenient service. 
+Bank acceptance bills have become a low-risk financial instrument commonly used by many small, medium and micro enterprises due to their short term, high convenience and strong liquidity. Through discounted bills, companies can turn the "bills" in their hands into "cash" and accelerate corporate funds Turnover, improve the efficiency of capital use. 
+
+However, the long-term asymmetry of information between small and medium-sized enterprises and financial institutions, which has led to the realization of bill financing, has always been a pain for small and medium-sized enterprises. Bank credit and discount procedures are complicated, intermediary market financing risks are high and intermediaries cannot provide compliance discount vouchers.
+
+ In response to the above problems, this system aims to solve the small, micro, short, and urgent needs of small and medium-sized enterprises, open the bottleneck of the connection between assets and funds, and build a "bridge" between enterprises and financial institutions to provide compliance, efficiency, efficiency and convenient service. 
 
 <table>
   <tr>
 
 ```
 <td><b>System Homepage:</b></td>
-<td><a href="https://piaoju.jd.com.io/">piaoju.jd.com</a></td>
+<td><a href="https://piaoju.jd.com">piaoju.jd.com</a></td>
 ```
 
   </tr>
@@ -25,13 +29,13 @@ Bank acceptance bills have become a low-risk financial instrument commonly used 
 
 This business mainly matches banks and enterprises. The platform provides multiple companies with their latest discount rate and other information to provide a compliant, efficient and convenient platform for corporate bill discounting. The specific use process is shown in the following figure.
 
-<div align="center"><img src="document-illustration/tiexian.webp" width="80%"/></div>
+<div align="center"><img src="document-illustration/tiexian.webp" width="70%"/></div>
 
 
 
 ## My Responsibilities
 
-- Adopted Optical Character Recognition(OCR) technology to provide users with bill input function. [Implementation details](resource/OCR.md)
+- Adopted [Optical Character Recognition(OCR) technology](https://piaoju.jd.com/fast-discount) to provide users with bill input function. [Implementation details](resource/OCR.md)
 
 <div align="center"><img src="document-illustration/ocr.png" width="70%"/></div>
 
