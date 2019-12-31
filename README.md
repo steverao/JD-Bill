@@ -9,20 +9,11 @@ However, the long-term asymmetry of information between small and medium-sized e
 <table>
   <tr>
 
-```
 <td><b>System Homepage:</b></td>
 <td><a href="https://piaoju.jd.com">piaoju.jd.com</a></td>
-```
 
   </tr>
-  <tr>
 
-```
-<td><b>Chinese documentation:</b></td>
-<td><a href="resource/README.cn.md">中文文档</a></td>
-```
-
-  </tr>
 </table>
 
 ## Getting Started
@@ -39,14 +30,14 @@ This business mainly matches banks and enterprises. The platform provides multip
 
 <div align="center"><img src="document-illustration/ocr.png" width="70%"/></div>
 
-- Used distributed cache Redis, RPC and distributed file system to maintain white list of bank users. [Implementation details](resource/WHITELIST.md)
+- Used distributed cache **Redis**, **RPC** and **cloud file server** to maintain white list of bank users. [Implementation details](resource/WHITELIST.md)
 
 <div align="center"><img src="document-illustration/maintain-whitelist.png" width="70%"/></div>
 
 - Designed database structure to provide dynamic and variable quote list display for bank users, and automatically matched quotes based on order information.
 
 
-- Used H-ui framework to complete the management background pages related to multiple systems.
+- Used **H-ui framework** to complete the management background pages related to multiple systems.
 
 
 
