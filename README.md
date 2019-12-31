@@ -1,81 +1,56 @@
-# 票据（Commerical-Business-Platform）
+## JD Bill
 
-## 1 项目简介
+Bank acceptance bills have become a low-risk financial instrument commonly used by many small, medium and micro enterprises due to their short term, high convenience and strong liquidity. Through discounted bills, companies can turn the "bills" in their hands into "cash" and accelerate corporate funds Turnover, improve the efficiency of capital use. However, the long-term asymmetry of information between small and medium-sized enterprises and financial institutions, which has led to the realization of bill financing, has always been a pain for small and medium-sized enterprises. Bank credit and discount procedures are complicated, intermediary market financing risks are high and intermediaries cannot provide compliance discount vouchers. In response to the above problems, this system aims to solve the small, micro, short, and urgent needs of small and medium-sized enterprises, open the bottleneck of the connection between assets and funds, and build a "bridge" between enterprises and financial institutions to provide compliance, efficiency, efficiency and convenient service. 
 
-#### 1.1 系统介绍
+<table>
+  <tr>
 
-银行承兑汇票由于期限短，便利性高，流动性强，已成为很多中小微企业普遍使用的低风险金融工具；企业通过票据贴现，可将手中的“票据”变成“现钱”，加速企业资金周转，提升资金使用效率。 但中小微企业和金融机构长时间的信息不对称，导致票据融资变现一直是中小微企业的心头之痛。银行授信及贴现手续繁杂，中介市场融资风险高且中介无法提供合规贴现凭证。针对以上问题本系统为解决中小微企业“小、微、短、急”的需求，打通资产与资金的对接瓶颈，搭建企业与金融机构间的“桥梁”，**为中小微企业提供合规、高效和便捷的服务。** 
+```
+<td><b>System Homepage:</b></td>
+<td><a href="https://piaoju.jd.com.io/">piaoju.jd.com</a></td>
+```
 
-#### 1.2 业务介绍
+  </tr>
+  <tr>
 
-##### 1.2.1 京票秒贴
+```
+<td><b>Chinese documentation:</b></td>
+<td><a href="resource/README.cn.md">中文文档</a></td>
+```
 
-该业务主要通过撮合银行与企业，平台通过对接多家银行提供其最新的贴现率等信息，为企业票据贴现提供一个合规、高效和便捷的平台。
+  </tr>
+</table>
 
-![](document-illustration/tiexian.webp)
+## Getting Started
 
-1.2.2 票据直通车
+This business mainly matches banks and enterprises. The platform provides multiple companies with their latest discount rate and other information to provide a compliant, efficient and convenient platform for corporate bill discounting. The specific use process is shown in the following figure.
 
-该子系统用户角色分为投资企业（核心企业）、融资企业（持票企业）。其为投资企业收购票据资产提供的信息获取与票据资产管理的渠道。为持票企业将手中票据兑现提供了新的方式。
-
-1.2.3 票融易
-
-该功能模块类似于白条，持票企业为了资金周转可将手中票据质押给平台或者企业出资方。到期后可选择赎回或放弃。使用该功能，持票企业仅需支付一定服务费就可快速融取资金。
-
-1.2.4 票据ABS
-
-该功能模块中文名称票据资产计划，属于一种低风险理财产品，通过融资购买票据资产，票据到期变现后再分利息给所有投资人。
-
-##### 
-
-#### 1.2 技术清单
-
-- **后端:** `spring`+`springMVC`+`Mybatis`等
-
-- **数据库:** `mysql`
-
-- **分布式中间件**：`Redis`、`JSF`、`JMQ`和`ZooKeeper`
-
-- 技术在系统中具体应用：
-
-  1>RPC：调用公司企业部分服务接口，如OCR识别、短信邮箱发送，银行账户余额查询等等，或者自己在某些基础服务提供系统中封装RPC接口给另外的对外接口使用。
-
-  2>JMQ：异步处理信息时
-
-  3>Redis：票据OCR结果缓存，分布式锁等。
-
-  4>云服务器管理：JDStorage和HSP等管理文件的上传和下载。
-
-  5>线程池:主要使用了ThreadPoolTaskExecutor线程池类来管理多线程的使用。
-
-#### 1.3 我的任务
-
-- **系统管理后台：**
-
-  1>普惠模块-资管计划业务部分：资管计划查询，票据查询维护。
-
-  2>银企贴现-直贴业务中的银企风控白名单维护。白名单以文件形式上传服务器，调用cbp系统通过在数据库中存储的文件名称，获取服务器中的文件，将其读取存入redis缓存中，通过封装jsf方法为管理后台提供缓存白名单调用。
-
-  3>管理后台采用的H-ui实现。
-
-   
-
-- **cbp系统：**
-
-  1>票据OCR业务变更迭代需求。
-
-  2>秒贴2.0中直贴业务自动查询匹配报价。
-
-  
-
-- **cbp-ABS系统：**
-
-  1>报价页面查询业务，清楚报价表格在数据库中的维护思路。
-
-  2>票据资管计划中订单报价匹配。根据承兑人类型，金额和到期日等信息到报价模板中匹配对应的报价。
+<div align="center"><img src="document-illustration/tiexian.webp" width="80%"/></div>
 
 
 
-- **e2e系统：**
+## My Responsibilities
 
-  ​	1>票据OCR业务变更迭代需求，并且负责将所有系统的OCR识别结果统计信息最终落库。
+- Adopted Optical Character Recognition(OCR) technology to provide users with bill input function. [Implementation details](resource/OCR.md)
+
+<div align="center"><img src="document-illustration/ocr.png" width="70%"/></div>
+
+- Used distributed cache Redis, RPC and distributed file system to maintain white list of bank users. [Implementation details](resource/WHITELIST.md)
+
+<div align="center"><img src="document-illustration/maintain-whitelist.png" width="70%"/></div>
+
+- Designed database structure to provide dynamic and variable quote list display for bank users, and automatically matched quotes based on order information.
+
+
+- Used H-ui framework to complete the management background pages related to multiple systems.
+
+
+
+
+
+
+
+
+
+
+
