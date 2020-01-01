@@ -17,7 +17,7 @@ However, the long-term asymmetry of information between small and medium-sized e
 <tr>
 
 <td><b>Chinese Documentation:</b></td>
-<td><a href="resource/README.CN.md">中文文档</a></td>
+<td><a href="resource/README.cn.md">中文文档</a></td>
 
   </tr>
 
