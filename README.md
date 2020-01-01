@@ -35,11 +35,11 @@ This business mainly matches banks and enterprises. The platform provides multip
 
 - Adopted [Optical Character Recognition(OCR) technology](https://piaoju.jd.com/fast-discount) to provide users with bill input function. [Implementation details](resource/OCR.md)
 
-<div align="center"><img src="document-illustration/ocr.png" width="70%"/></div>
+<div align="center"><img src="document-illustration/ocr.png" width="60%"/></div>
 
 - Used distributed cache **Redis**, **RPC** and **cloud file server** to maintain white list of bank users. [Implementation details](resource/WHITELIST.md)
 
-<div align="center"><img src="document-illustration/maintain-whitelist.png" width="70%"/></div>
+<div align="center"><img src="document-illustration/maintain-whitelist.png" width="60%"/></div>
 
 - Designed database structure to provide dynamic and variable quote list display for bank users, and automatically matched quotes based on order information.
 

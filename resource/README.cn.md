@@ -6,13 +6,20 @@
 
 该业务主要通过撮合银行与企业，平台通过对接多家银行提供其最新的贴现率等信息，为企业票据贴现提供一个合规、高效和便捷的平台。其详细操作流程如下图：
 
-<div align="center"><img src="document-illustration/tiexian.webp" width="70%"/></div>
+<div align="center"><img src="../document-illustration/tiexian.webp" width="70%"/></div>
 
  
 
 ## 我的工作
 
 - 使用[文本图像识别技术（OCR）](https://piaoju.jd.com/fast-discount)为用户提供了更好的票据信息输入功能。
+
+  <div align="center"><img src="../document-illustration/ocr.png" width="60%"/></div>
+
 - 使用分布式缓存**Redis**，**RPC**和**云文件服务器**为银行用户提供白名单管理功能。
+
+  <div align="center"><img src="../document-illustration/maintain-whitelist.png" width="60%"/></div>
+
 - 为银行用户提供动态报价列表功能，并实现根据订单信息匹配报价功能。
+
 - 使用H-ui框架为该系统实现了多个管理后台页面，供运维人员监测系统运行状态。
